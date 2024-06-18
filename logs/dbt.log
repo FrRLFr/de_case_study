@@ -1,0 +1,127 @@
+[0m11:30:19.261477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b40a2f4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b3ef9a0a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b3ef86880>]}
+
+
+============================== 11:30:19.264523 | 2615fb35-5b19-44cb-882c-1d084f420e88 ==============================
+[0m11:30:19.264523 [info ] [MainThread]: Running with dbt=1.7.16
+[0m11:30:19.265153 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init de_case_study', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:30:19.266038 [debug] [MainThread]: Starter project path: /home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study/.venv/lib/python3.8/site-packages/dbt/include/starter_project
+[0m11:30:19.267786 [info ] [MainThread]: 
+Your new dbt project "de_case_study" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:30:19.268197 [info ] [MainThread]: Setting up your profile.
+[0m11:30:24.745102 [error] [MainThread]: Encountered an error:
+list index out of range
+[0m11:30:24.748712 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study/.venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study/.venv/lib/python3.8/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study/.venv/lib/python3.8/site-packages/dbt/cli/main.py", line 516, in init
+    results = task.run()
+  File "/home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study/.venv/lib/python3.8/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study/.venv/lib/python3.8/site-packages/dbt/task/init.py", line 263, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study/.venv/lib/python3.8/site-packages/dbt/task/init.py", line 245, in ask_for_adapter_choice
+    return available_adapters[numeric_choice - 1]
+IndexError: list index out of range
+
+[0m11:30:24.751584 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 5.550052, "process_user_time": 1.374565, "process_kernel_time": 0.064307, "process_mem_max_rss": "90008", "process_in_blocks": "23296", "process_out_blocks": "80", "command_success": false}
+[0m11:30:24.753208 [debug] [MainThread]: Command `dbt init` failed at 11:30:24.752741 after 5.55 seconds
+[0m11:30:24.754346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b40a2f4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b40168d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8b41176a30>]}
+[0m11:30:24.755493 [debug] [MainThread]: Flushing usage events
+[0m11:30:33.925897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3cdad14460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3cd926cc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3cd9257c40>]}
+
+
+============================== 11:30:33.927959 | d0212b3a-9784-4062-90eb-c74c66e16738 ==============================
+[0m11:30:33.927959 [info ] [MainThread]: Running with dbt=1.7.16
+[0m11:30:33.928486 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '/home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init de_case_study', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:30:33.929147 [info ] [MainThread]: A project called de_case_study already exists here.
+[0m11:30:33.929751 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.04851125, "process_user_time": 1.339974, "process_kernel_time": 0.071998, "process_mem_max_rss": "89932", "process_out_blocks": "8", "process_in_blocks": "0"}
+[0m11:30:33.930191 [debug] [MainThread]: Command `dbt init` succeeded at 11:30:33.930071 after 0.05 seconds
+[0m11:30:33.930509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3cdad14460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3cd926c0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3cdb448760>]}
+[0m11:30:33.930836 [debug] [MainThread]: Flushing usage events
+[0m11:31:28.040231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f29c292d460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f29c0e75580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f29c0e75f10>]}
+
+
+============================== 11:31:28.042267 | 217d2e20-b927-4f0d-b8a4-c6f0fc34f613 ==============================
+[0m11:31:28.042267 [info ] [MainThread]: Running with dbt=1.7.16
+[0m11:31:28.042779 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init dbt_case_study', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:31:28.043464 [debug] [MainThread]: Starter project path: /home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study/.venv/lib/python3.8/site-packages/dbt/include/starter_project
+[0m11:31:28.045189 [info ] [MainThread]: 
+Your new dbt project "dbt_case_study" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:31:28.045579 [info ] [MainThread]: Setting up your profile.
+[0m11:31:30.729648 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 2.7337313, "process_user_time": 1.41939, "process_kernel_time": 0.044105, "process_mem_max_rss": "116220", "process_out_blocks": "80", "process_in_blocks": "0"}
+[0m11:31:30.730277 [debug] [MainThread]: Command `dbt init` succeeded at 11:31:30.730121 after 2.73 seconds
+[0m11:31:30.730676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f29c292d460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f29c0e8a040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f29c0e6c3a0>]}
+[0m11:31:30.731121 [debug] [MainThread]: Flushing usage events
+[0m11:34:13.105646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0bb22f4400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0bb08546a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0bb1a36e20>]}
+
+
+============================== 11:34:13.107751 | 77cbf4db-12d5-4eac-8dbe-7d2be80cd871 ==============================
+[0m11:34:13.107751 [info ] [MainThread]: Running with dbt=1.7.16
+[0m11:34:13.108230 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt init xenata', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:34:13.108919 [debug] [MainThread]: Starter project path: /home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study/.venv/lib/python3.8/site-packages/dbt/include/starter_project
+[0m11:34:13.110421 [info ] [MainThread]: 
+Your new dbt project "xenata" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:34:13.110844 [info ] [MainThread]: Setting up your profile.
+[0m11:34:15.266337 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 2.2056358, "process_user_time": 1.478352, "process_kernel_time": 0.039955, "process_mem_max_rss": "116512", "process_out_blocks": "80", "process_in_blocks": "0"}
+[0m11:34:15.267106 [debug] [MainThread]: Command `dbt init` succeeded at 11:34:15.266869 after 2.21 seconds
+[0m11:34:15.267862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0bb22f4400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0bb1a36940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0bb2a34d90>]}
+[0m11:34:15.268456 [debug] [MainThread]: Flushing usage events
+[0m11:42:13.129125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa213a4a460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa211f93760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa211f93910>]}
+
+
+============================== 11:42:13.131166 | e5c0bd24-90a4-476d-bea6-63ae5746ee80 ==============================
+[0m11:42:13.131166 [info ] [MainThread]: Running with dbt=1.7.16
+[0m11:42:13.131695 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:42:13.132145 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/frauke/Documents/Bewerbungen/Xeneta/DE_case_study_xeneta/de_case_study/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:42:13.132757 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.04811739, "process_user_time": 1.413438, "process_kernel_time": 0.035934, "process_mem_max_rss": "90220", "process_out_blocks": "8", "command_success": false, "process_in_blocks": "0"}
+[0m11:42:13.133237 [debug] [MainThread]: Command `dbt run` failed at 11:42:13.133106 after 0.05 seconds
+[0m11:42:13.133583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa213a4a460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa211f930d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa211f930a0>]}
+[0m11:42:13.133939 [debug] [MainThread]: Flushing usage events

@@ -105,11 +105,15 @@ Based on the raw data from the files above, provide _average_ and _median_ daily
 ### Help your data users
 
 Provide a few example queries to the data users. For example, how can they get the average container shipping price of equipment type _2_ from China East Main region to US West Coast region?
+### see files in analysis folder
+###
 
 ### Data update: new contracts
 
 - Load charges_2 and datapoints_2 data to the DB and your models should pick up on these changes, make calculations accordingly. Check your assumptions!
-
+### charges and datapoints are given as macro, which can be run seperately with 
+dbt run-operation ensure_table 
+### that ensures all data is loaded
 
 ### Requirement update
 
@@ -128,6 +132,8 @@ So your task is:
  - Add a new _boolean_ column, named `dq_ok` (meaning "data quality: OK") to your table in the `final` schema that holds the aggregated prices. This column should have True if and only if the new data quality requirement is true for that given row (at least 5 different companies and 2 different suppliers provide data for that day and lane and equipment type).
 
 When implementing this: Be prepared for a future update! Maybe next quarter, with more data incoming, we could increase the requirements for sufficient coverage, to have even more robust data.
+### additional model in models/final
+####
 
 ### Optional tasks
 

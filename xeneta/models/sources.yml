@@ -1,0 +1,8 @@
+sources:
+  - name: source_data
+    schema: raw
+    tables:
+      - name: raw_datapoints
+      - name: raw_charges
+      
+      

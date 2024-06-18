@@ -1,0 +1,87 @@
+version: 2
+
+models:
+    - name: ports
+      description: "Information about cargo ports, including:"
+      columns:  
+        - name: PID
+          description: "PID: an integer ID for the port, unique"
+          tests: 
+            - unique
+            - not_null
+        - name: CODE
+          description: "5-character port code, also unique"
+          tests: 
+            - unique
+        - name: NAME
+          description: "Port name"
+        - name: slug_region
+          description: "Slug identifying which region the port belongs to"
+        - name: COUNTRY
+          description: "Country"
+        - name: COUNTRY_CODE
+          description: "Two-letter country code"
+
+
+    - name: regions
+      description: "A hierarchy of regions that Xeneta has defined, based on ocean container shipping routes and pricing patterns. You can think about this hierarchy as a few top-level regions (those have Null as their parent region), and a tree of smaller regions under them."
+      columns:  
+        - name: slug_region_name
+          description: "a machine-readable form of the region name"
+          tests: 
+            - not_null
+        - name: region_name
+          description: "The name of the region"
+        - name: PARENT
+          description: "Slug describing which parent region the region belongs to in Xeneta's region hierarchy"
+
+
+    - name: exchange_rates
+      columns:  
+        - name: DAY
+          description: "Day on which the exchange rate is valid"
+        - name: CURRENCY
+          description: "Three-letter currency code"
+        - name: RATE
+          description: "Exchange Rate for converting a price in a given currency to USD"
+
+
+    - name: charges
+      columns:  
+        - name: D_ID
+          description: "D_ID is the identifier of the datapoint/contract that this charge belongs to"
+          tests: 
+            - not_null
+        - name: CURRENCY
+          description: "Currency is the three-letter currency code to use"
+        - name: CHARGE_VALUE
+          description: "Value is the numerical value of this part of the full price"
+
+    - name: datapoints
+      columns:  
+        - name: D_ID
+          description: "a unique ID for a datapoint (identifies a shipping contract)"
+          tests: 
+            - unique
+            - not_null
+        - name: Created
+          descripton: "timestamp when this shipping contract info landed in our system"
+        - name: ORIGIN_PID
+          description: "Origin and Destination Port-IDs, identify where the containers to be moved start and end their journey"
+          tests: 
+            - not_null
+        - name: DESTINATION_PID
+          description: "Origin and Destination Port-IDs, identify where the containers to be moved start and end their journey"
+          tests: 
+            - not_null
+        - name: VALID_FROM
+          description: "valid_from and valid_to dates between which the cargo will be shipped for this contract's price, usually a month or a year, but can be shorter or longer as well"
+        - name: VALID_TO
+          description: "valid_from and valid_to dates between which the cargo will be shipped for this contract's price, usually a month or a year, but can be shorter or longer as well"
+        - name: COMPANY_ID
+          description: is an integer ID for the company that wants to move cargo as of this contract (the "buyer" of this shipping contract)
+        - name: SUPPLIER_ID
+          description: integer ID for the vessel operator company that provides the shipping service (the "seller" of this contract)
+        - name: EQUIPMENT_ID
+          description: an integer between 1 and 6 inclusive, identifies the type of the container (also known as equipment) that is used for transportation. Our users always want to get aggregated price levels for one specific container type of their interest.
+

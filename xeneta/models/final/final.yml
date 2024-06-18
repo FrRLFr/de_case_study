@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: daily_prices_usd
+    description: "Based on the raw data from the files above, provide _average_ and _median_ daily prices for each equipment type, on any lane where there is any data available, calculated in _USD_. Save this data in a table in the `final` schema."
+    columns:
+      - name: origin_pid
+      - name: destination_pid
+      - name: eqipment_id
+      - name: day
+      - name: average_daily_charge
+      - name: median_daily_charge
+
+
+models:
+  - name: daily_prices_usd
+    description: "Based on the raw data from the files above, provide _average_ and _median_ daily prices for each equipment type, on any lane where there is any data available, calculated in _USD_. Save this data in a table in the `final` schema."
+    columns:
+      - name: origin_pid
+      - name: destination_pid
+      - name: eqipment_id
+      - name: day
+      - name: average_daily_charge
+      - name: median_daily_charge
+      - name: dq_okay
