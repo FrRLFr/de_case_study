@@ -114,6 +114,7 @@ Provide a few example queries to the data users. For example, how can they get t
 ### charges and datapoints are given as macro, which can be run seperately with 
 dbt run-operation ensure_table 
 ### that ensures all data is loaded
+### maybe actually better to solve with a packge
 
 ### Requirement update
 
